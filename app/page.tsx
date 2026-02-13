@@ -439,7 +439,7 @@ export default function Page() {
               height={25}
               className="object-contain"
             />
-            <span>medmethod@gmail.com</span>
+            <span>contact@medmethod.fr</span>
           </a>
 
           <a
