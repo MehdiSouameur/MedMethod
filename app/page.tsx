@@ -117,7 +117,7 @@ export default function Page() {
       </header>
 
       {/* HERO */}
-      <section id="hero" className="section-container py-20 sm:py-26 flex flex-col justify-center items-center">
+      <section id="hero" className="section-container py-20 pt-15 sm:py-26 sm:pt-20 sm:pb-30 flex flex-col justify-center items-center">
 
         <h1 className="w-full sm:w-[90%]  font-header type-hero  text-center text-blackink tracking-[-0.04em] sm:leading-[0.85]">
           {" "}
@@ -219,8 +219,9 @@ export default function Page() {
         <h1 id="exemples" className="font-header type-h2 text-center text-whiteink tracking-[-0.04em] sm:leading-[0.78]">
             Des sites adaptés à votre métier
         </h1>
+        <p className="mt-10 text-whiteink font-light text-xs block sm:hidden">Balayez pour découvrir</p>
 
-        <div className="mt-10 w-full sm:w-[90%] mx-auto">
+        <div className="mt-1 sm:mt-10 w-full sm:w-[90%] mx-auto">
             <EmblaCarousel slides={slides} options={{ loop: true }} nudgeOnView nudgeDelayMs={50} />
         </div>
 

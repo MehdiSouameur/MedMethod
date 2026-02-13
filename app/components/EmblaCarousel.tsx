@@ -69,16 +69,33 @@ export default function EmblaCarousel({
 
   return (
     <div ref={inViewRef} className="w-full">
-      <div className="grid grid-cols-[auto_1fr_auto] items-center gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-[auto_1fr_auto] items-center gap-3">
         {/* Prev */}
         <button type="button" onClick={scrollPrev} disabled={!canScrollPrev} aria-label="Previous slide"
-          className="rounded-full border border-brand-main bg-brand-main px-2 py-1 font-semibold text-whiteink text-xl shadow-[0_8px_20px_rgba(0,0,0,0.25)] hover:shadow-[0_10px_28px_rgba(0,0,0,0.3)] active:shadow-[0_4px_12px_rgba(0,0,0,0.2)] transition-all duration-150 ease-out hover:scale-[1.04] active:scale-[0.98] hover:bg-brand-main-light hover:border-brand-main-light active:bg-whiteink active:text-brand-main active:border-whiteink disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+            className="
+              hidden sm:flex
+              rounded-full
+              border border-brand-main
+              bg-brand-main
+              text-whiteink
+              font-semibold
+              shadow-[0_8px_20px_rgba(0,0,0,0.25)]
+              transition-all duration-150 ease-out
+              active:scale-95
+              disabled:opacity-40 disabled:cursor-not-allowed
+              cursor-pointer
+
+              w-8 h-8 text-base        /* 📱 Mobile */
+              sm:w-9 sm:h-9 sm:text-lg
+              md:w-10 md:h-10 md:text-xl
+              items-center justify-center
+            "
         >
           ←
         </button>
 
         {/* Viewport */}
-        <div className="overflow-hidden" ref={emblaRef}>
+        <div className="min-w-0 w-full overflow-hidden" ref={emblaRef}>
           <div className="flex touch-pan-y">
             {slides.map((slide, i) => (
               <div key={i} className="min-w-0 flex-[0_0_100%]">
@@ -90,8 +107,35 @@ export default function EmblaCarousel({
 
         {/* Next */}
         <button type="button" onClick={scrollNext} disabled={!canScrollNext} aria-label="Next slide"
-          className="rounded-full border border-brand-main bg-brand-main px-2 py-1 font-semibold text-whiteink text-xl shadow-[0_8px_20px_rgba(0,0,0,0.25)] hover:shadow-[0_10px_28px_rgba(0,0,0,0.3)] active:shadow-[0_4px_12px_rgba(0,0,0,0.2)] transition-all duration-150 ease-out hover:scale-[1.04] active:scale-[0.98] hover:bg-brand-main-light hover:border-brand-main-light active:bg-whiteink active:text-brand-main active:border-whiteink disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
-        >
+          className="
+            hidden sm:flex
+            items-center justify-center
+            rounded-full
+
+            border border-brand-main
+            bg-brand-main
+            text-whiteink text-xl font-semibold
+
+            px-2 py-1
+
+            shadow-[0_8px_20px_rgba(0,0,0,0.25)]
+            hover:shadow-[0_10px_28px_rgba(0,0,0,0.3)]
+            active:shadow-[0_4px_12px_rgba(0,0,0,0.2)]
+
+            transition-all duration-150 ease-out
+            hover:scale-[1.04]
+            active:scale-[0.98]
+
+            hover:bg-brand-main-light
+            hover:border-brand-main-light
+            active:bg-whiteink
+            active:text-brand-main
+            active:border-whiteink
+
+            disabled:opacity-40
+            disabled:cursor-not-allowed
+            cursor-pointer
+          "       >
           →
         </button>
       </div>
