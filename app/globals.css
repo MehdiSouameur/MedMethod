@@ -1,2 +1,102 @@
 @import "tailwindcss";
 
+@theme {
+  /* Whites / surfaces */
+  --color-white: #F7F7F7;
+  --color-gray: #ECECEC;
+  --color-whiteink: #EDEDED;
+
+  /* Black / ink */
+  --color-blackink: #222222;
+
+  /* Blues / brand */
+  --color-brand-main-light: #0095FF;
+  --color-brand-main: #008AED;
+  --color-brand-dark: #00416F;
+
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: var(--font-source-sans), system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--color-white);
+  color: var(--color-blackink);
+}
+
+
+@utility text-primary {
+  @apply text-[#0095ff];
+}
+
+@layer utilities {
+  .font-header {
+    font-family: var(--font-satoshi), system-ui, sans-serif;
+  }
+
+  .font-paragraph {
+    font-family: var(--font-source-sans), system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply mx-auto max-w-6xl
+           px-4 sm:px-6 lg:px-15
+           py-20;
+  }
+  
+  .type-hero {
+    @apply font-semibold tracking-[-0.03em] leading-[1.05]
+           text-3xl sm:text-5xl lg:text-6xl;
+  }
+
+  .type-h1 {
+    @apply font-semibold tracking-[-0.02em] leading-[1.1]
+           text-3xl sm:text-4xl lg:text-5xl;
+  }
+
+  .type-h1-sm {
+    @apply font-semibold tracking-[-0.015em] leading-[1.1]
+           text-2xl sm:text-3xl lg:text-4xl;
+  }
+
+  .type-h2 {
+    @apply font-semibold tracking-[-0.01em] leading-[1.15]
+           text-xl sm:text-2xl lg:text-3xl;
+  }
+
+  .type-h3 {
+    @apply font-semibold leading-[1.2]
+           text-lg sm:text-xl lg:text-2xl;
+  }
+
+  .type-body-lg {
+    @apply font-normal leading-[1.45]
+           text-base sm:text-lg;
+  }
+
+
+  .type-logo {
+    @apply font-semibold tracking-[-0.01em] leading-[1.2]
+           text-base sm:text-lg;
+  }
+}
+
+
+@keyframes borderIn {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
