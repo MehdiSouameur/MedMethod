@@ -395,12 +395,11 @@ export default function Page() {
             Je vous propose une solution claire et qui donne envie de vous contacter.
         </p>
 
-        <div className="mt-2 flex flex-row gap-3">
+        <div className="mt-10 flex justify-center items-center flex-col sm:flex-row gap-3 sm:gap-5">
 
           <a
             href="mailto:medmethod@gmail.com"
             className="
-              mt-5
               py-1 px-1 sm:px-3
               font-bold
               type-body-lg
@@ -446,7 +445,6 @@ export default function Page() {
           <a
               href="tel:+33783916628"
               className="
-                mt-5
                 py-1 px-1 sm:px-3
                 font-bold
                 type-body-lg
