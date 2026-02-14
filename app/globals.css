@@ -5,9 +5,13 @@
   --color-white: #F7F7F7;
   --color-gray: #ECECEC;
   --color-whiteink: #EDEDED;
+--color-whiteink-soft: #CFCFCF;
+
 
   /* Black / ink */
   --color-blackink: #222222;
+  --color-blackink-soft: #4A4A4A;
+
 
   /* Blues / brand */
   --color-brand-main-light: #0095FF;

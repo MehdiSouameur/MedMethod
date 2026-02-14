@@ -65,50 +65,41 @@ export default function Page() {
 
             <a href="#method" 
             className=" 
-              cursor-pointer
-            text-whiteink
-              transition-colors duration-150 ease-out
-              hover:text-brand-dark    cursor-pointer
-              text-whiteink
+                text-whiteink
+                transition-all duration-150 ease-out
 
-              transition-all duration-150 ease-out
-              hover:text-brand-dark
-              hover:scale-[1.05]
+                md:hover:text-brand-dark
+                md:hover:scale-105
 
-              active:scale-[0.95]
-              active:opacity-80">
+                active:text-brand-dark
+                active:scale-95
+                active:opacity-80">
               Méthode
             </a>
             <a href="#exemples" 
             className=" 
-              cursor-pointer
-            text-whiteink
-              transition-colors duration-150 ease-out
-              hover:text-brand-dark    cursor-pointer
-              text-whiteink
+                text-whiteink
+                transition-all duration-150 ease-out
 
-              transition-all duration-150 ease-out
-              hover:text-brand-dark
-              hover:scale-[1.05]
+                md:hover:text-brand-dark
+                md:hover:scale-105
 
-              active:scale-[0.95]
-              active:opacity-80">
+                active:text-brand-dark
+                active:scale-95
+                active:opacity-80">
                 Exemples
             </a>
             <a href="#contact"
             className=" 
-              cursor-pointer
-            text-whiteink
-              transition-colors duration-150 ease-out
-              hover:text-brand-dark    cursor-pointer
-              text-whiteink
+                text-whiteink
+                transition-all duration-150 ease-out
 
-              transition-all duration-150 ease-out
-              hover:text-brand-dark
-              hover:scale-[1.05]
+                md:hover:text-brand-dark
+                md:hover:scale-105
 
-              active:scale-[0.95]
-              active:opacity-80">
+                active:text-brand-dark
+                active:scale-95
+                active:opacity-80">
                 Contact
             </a>
 
@@ -117,9 +108,9 @@ export default function Page() {
       </header>
 
       {/* HERO */}
-      <section id="hero" className="section-container py-20 pt-15 sm:py-26 sm:pt-20 sm:pb-30 flex flex-col justify-center items-center">
+      <section id="hero" className="section-container py-20 pt-15 sm:py-26 sm:pt-20 sm:pb-30 flex flex-col sm:justify-center sm:items-center">
 
-        <h1 className="w-full sm:w-[90%]  font-header type-hero  text-center text-blackink tracking-[-0.04em] sm:leading-[0.85]">
+        <h1 className="w-full sm:w-[90%]  font-header type-hero  sm:text-center text-blackink tracking-[-0.04em] sm:leading-[0.85]">
           {" "}
           <span className="bg-gradient-to-b from-[#007ED6] via-[#008AED] to-[#1596EA] bg-clip-text text-transparent">
             sites internet
@@ -134,11 +125,11 @@ export default function Page() {
             <HeroLine />
         </div>
 
-        <p className="type-body-lg font-paragraph text-blackink mt-4 sm:max-w-[50%] text-center">
+        <p className="type-body-lg font-paragraph text-blackink-soft mt-4 w-[65%] sm:max-w-[30%] sm:text-center">
           Attirez et convertissez vos visiteurs avec un site clair et crédible.
         </p>
 
-        <div className="mt-5 flex flex-row gap-4">
+        <div className="mt-3 sm:mt-5 flex flex-row gap-4">
           <a
               href="#contact"
               className="
@@ -219,13 +210,13 @@ export default function Page() {
         <h1 id="exemples" className="font-header type-h2 text-center text-whiteink tracking-[-0.04em] sm:leading-[0.78]">
             Des sites adaptés à votre métier
         </h1>
-        <p className="mt-10 text-whiteink font-light text-xs block sm:hidden">Balayez pour découvrir</p>
+        <p className="mt-10 text-whiteink-soft font-light text-xs block sm:hidden">Balayez pour découvrir</p>
 
         <div className="mt-1 sm:mt-10 w-full sm:w-[90%] mx-auto">
             <EmblaCarousel slides={slides} options={{ loop: true }} nudgeOnView nudgeDelayMs={50} />
         </div>
 
-        <p className="text-whiteink mt-10 font-extralight">
+        <p className="text-whiteink-soft mt-10 font-extralight">
           Exemples de mises en page et structures réalisées par MedMethod
         </p>
 
@@ -238,7 +229,7 @@ export default function Page() {
         </h1>
 
         <div className="flex flex-col justify-center items-center w-full sm:w-[60%] mt-10 type-body-lg font-semibold border-l-3 border-brand-main pl-6">
-          <div className="w-full sm:w-[80%]">
+          <div className="w-full sm:w-[80%] text-blackink-soft">
             <p>
               Je m’appelle Mehdi. Je conçois et réalise des sites internet pour professionels,
               avec une approche simple et structurée.
@@ -287,8 +278,8 @@ export default function Page() {
               </div>
 
               <div className="pl-5 flex flex-col">
-                  <p className="type-h3 font-header font-medium tracking-[-0.04em]">Périmètre et délais définis</p>
-                  <p>Le projet est cadré dès le départ, avec des étapes claires et un délai annoncé.</p>
+                  <p className="type-h3 font-header text-blackink font-medium tracking-[-0.04em]">Périmètre et délais définis</p>
+                  <p className="text-blackink-soft">Le projet est cadré dès le départ, avec des étapes claires et un délai annoncé.</p>
               </div>
             </div>
 
@@ -305,8 +296,8 @@ export default function Page() {
               </div>
 
               <div className="pl-5 flex flex-col">
-                  <p className="type-h3 font-header font-medium tracking-[-0.04em]">Un suivi clair à chaque étape</p>
-                  <p>Vous savez toujours où en est votre projet.</p>
+                  <p className="text-blackink type-h3 font-header font-medium tracking-[-0.04em]">Un suivi clair à chaque étape</p>
+                  <p className="text-blackink-soft">Vous savez toujours où en est votre projet.</p>
               </div>
             </div>
 
@@ -322,10 +313,10 @@ export default function Page() {
               </div>
 
               <div className="pl-5 flex flex-col">
-                <p className="type-h3 font-header font-medium tracking-[-0.04em]">
+                <p className="text-blackink type-h3 font-header font-medium tracking-[-0.04em]">
                   Prix clair, fixé à l’avance
                 </p>
-                <p>
+                <p className="text-blackink-soft">
                   Les projets commencent généralement autour de 500 €, avec un prix défini selon le périmètre.
                 </p>
               </div>
@@ -388,11 +379,11 @@ export default function Page() {
       {/* CONTACT */}
       <section id="contact" className="section-container flex flex-col justify-center items-center bg-brand-dark">
         <h1 className="w-full font-header type-h2 text-center text-whiteink tracking-[-0.04em] sm:leading-[0.78]">
-            Parlons de votre projet
+            Réservez un échange de 15 minutes
         </h1>
         <p className="text-whiteink type-body-lg sm:leading-[1.2] mt-5 w-full sm:w-[80%] text-center">
-            Décrivez votre activité et vos objectifs.<br></br>
-            Je vous propose une solution claire et qui donne envie de vous contacter.
+            Expliquez-moi votre activité et vos besoins.<br></br>
+            Appelez-moi directement ou écrivez-moi, je vous propose un créneau rapidement.
         </p>
 
         <div className="mt-10 flex justify-center items-center flex-col sm:flex-row gap-3 sm:gap-5">

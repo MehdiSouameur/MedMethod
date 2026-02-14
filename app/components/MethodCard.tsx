@@ -63,10 +63,10 @@ export function MethodStep({
           {n}
         </h1>
 
-        <h1 className="type-h3 font-header font-medium">{title}</h1>
+        <h1 className="text-blackink type-h3 font-header font-medium">{title}</h1>
       </div>
 
-      <p className="text-sm font-medium">{text}</p>
+      <p className="text-blackink-soft text-sm font-medium">{text}</p>
     </div>
   );
 }
